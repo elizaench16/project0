@@ -1,0 +1,55 @@
+
+
+/*Gryffindor variables*/
+$GryffBackground: #D16002; /*orange-brown*/
+$GryffMainColor: #900D09; /*scarlet*/
+$GryffSecondaryColor: #FFD700;/*yellow gold*/
+
+/*Hufflepuff variables*/
+$HuffBackground: #000000; /*black*/
+$HuffMainColor: #FFFD01; /*bright yellow*/
+$HuffSecondaryColor: #FFC30B; /*honey yellow*/
+
+/*Slytherin variables*/
+$SlyBackground: #D16002; /*orange-brown*/
+$SlyMainColor: #900D09; /*scarlet*/
+$SlySecondaryColor: #FFD700; /*yellow gold*/
+
+.house {
+    text-align: center;
+    margin: 30px;
+    img {
+      height: 40%;
+    }
+    h1 {
+      font-size: 80px;
+      font-weight: bold;
+      font-family: Luminari, fantasy;
+    }
+    h2, h3, h4, h5, h6 {
+      font-family: Apple Chancery, cursive;
+    }
+    div {
+      border: 4px solid;
+      width: 30%;
+    }
+    p {
+      font-size: 18;
+    }
+    ul {
+      text-align: left;
+      font-size: 20;
+      li{
+        font-size: 18;
+      }
+    }
+}
+
+.greatHall {
+  @extend .house;
+  h1, h2, h3, h4, h5, h6 {
+    color: #AA26DA; /*royal purple*/
+  }
+  background-color: #210039; /*midnight blue*/
+  color: #66CD00; /*chartreuse  */
+}
