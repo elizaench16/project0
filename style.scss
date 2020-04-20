@@ -1,4 +1,9 @@
-
+/*General style variables*/
+$borderWidth: 4px;
+/*Great Hall variables*/
+$GHBackColor: #210039; /*midnight blue*/
+$GHPrimaryColor: #AA26DA; /*royal purple*/
+$GHSecondaryColor: #66CD00; /*chartreuse  */
 
 /*Gryffindor variables*/
 $GryffBackground: #D16002; /*orange-brown*/
@@ -30,8 +35,9 @@ $SlySecondaryColor: #FFD700; /*yellow gold*/
       font-family: Apple Chancery, cursive;
     }
     div {
-      border: 4px solid;
       width: 30%;
+      display: flex;
+      flex-wrap: wrap;
     }
     p {
       font-size: 18;
@@ -47,9 +53,12 @@ $SlySecondaryColor: #FFD700; /*yellow gold*/
 
 .greatHall {
   @extend .house;
+  background-color: $GHBackColor; /*midnight blue*/
+  color: $GHSecondaryColor;
   h1, h2, h3, h4, h5, h6 {
-    color: #AA26DA; /*royal purple*/
+    color: $GHPrimaryColor;
   }
-  background-color: #210039; /*midnight blue*/
-  color: #66CD00; /*chartreuse  */
+  div {
+    border: $borderWidth solid $GHSecondaryColor;
+  }
 }
