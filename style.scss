@@ -1,13 +1,13 @@
 /*General style variables*/
-$borderWidth: 4px;
+$borderWidth: 6px;
 /*Great Hall variables*/
 $GHBackColor: #210039; /*midnight blue*/
-$GHPrimaryColor: #AA26DA; /*royal purple*/
-$GHSecondaryColor: #66CD00; /*chartreuse  */
+$GHPrimaryColor: #E2B8FF; /*royal purple*/
+$GHSecondaryColor: #529027; /*chartreuse  */
 
 /*Gryffindor variables*/
-$GryffBackground: #D16002; /*orange-brown*/
-$GryffMainColor: #900D09; /*scarlet*/
+$GryffBackground: #F28F1C; /*ff6347; A04040; burgundy*/
+$GryffMainColor: #b31b1b; /*cherry*/
 $GryffSecondaryColor: #FFD700;/*yellow gold*/
 
 /*Hufflepuff variables*/
@@ -15,39 +15,44 @@ $HuffBackground: #000000; /*black*/
 $HuffMainColor: #FFFD01; /*bright yellow*/
 $HuffSecondaryColor: #FFC30B; /*honey yellow*/
 
+/*Ravenclaw variables*/
+$RavenBackground: #162252; /*navy*/
+$RavenMainColor: #DBB539; /* bronze*/
+$RavenSecondaryColor: #9FB6CD; /*cobalt*/
+
 /*Slytherin variables*/
-$SlyBackground: #D16002; /*orange-brown*/
-$SlyMainColor: #900D09; /*scarlet*/
-$SlySecondaryColor: #FFD700; /*yellow gold*/
+$SlyBackground:	#003407; /*dark sea green*/
+$SlyMainColor: 	#C1CDCD;/*#2a6e29; emerald green*/
+$SlySecondaryColor: #c7c7c7; /*steel grey*/
 
 .house {
     text-align: center;
-    margin: 30px;
+    margin: 10px;
     img {
       height: 40%;
     }
     h1 {
-      font-size: 80px;
+      font-size: 100px;
       font-weight: bold;
       font-family: Luminari, fantasy;
     }
     h2, h3, h4, h5, h6 {
       font-family: Apple Chancery, cursive;
-    }
-    div {
-      width: 30%;
-      display: flex;
-      flex-wrap: wrap;
+      font-weight: bold;
     }
     p {
-      font-size: 18;
+      font-size: 22;
     }
     ul {
       text-align: left;
-      font-size: 20;
+      font-size: 26;
       li{
-        font-size: 18;
+        font-size: 20;
       }
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
 
@@ -56,9 +61,64 @@ $SlySecondaryColor: #FFD700; /*yellow gold*/
   background-color: $GHBackColor; /*midnight blue*/
   color: $GHSecondaryColor;
   h1, h2, h3, h4, h5, h6 {
-    color: $GHPrimaryColor;
+    color: $GHSecondaryColor;
+  }
+  .container {
+      div {
+        border: $borderWidth solid $GHSecondaryColor;
+        background-color: $GHPrimaryColor;
+        font-size: 20px;
+        margin: 10px;
+        padding: 20px;
+        width: 400px;
+      }
+    }
+}
+
+.gryffindor {
+  @extend .house;
+  background-color: $GryffBackground;
+  color: $GryffSecondaryColor;
+  h1, h2, h3, h4, h5, h6 {
+    color: $GryffMainColor;
   }
   div {
-    border: $borderWidth solid $GHSecondaryColor;
+    border: $borderWidth solid $GryffSecondaryColor;
+  }
+}
+
+.hufflepuff {
+  @extend .house;
+  background-color: $HuffBackground;
+  color: $HuffSecondaryColor;
+  h1, h2, h3, h4, h5, h6 {
+    color: $HuffMainColor;
+  }
+  div {
+    border: $borderWidth solid $HuffSecondaryColor;
+  }
+}
+
+.ravenclaw {
+  @extend .house;
+  background-color: $RavenBackground;
+  color: $RavenSecondaryColor;
+  h1, h2, h3, h4, h5, h6 {
+    color: $RavenMainColor;
+  }
+  div {
+    border: $borderWidth solid $RavenSecondaryColor;
+  }
+}
+
+.slytherin {
+  @extend .house;
+  background-color: $SlyBackground;
+  color: $SlySecondaryColor;
+  h1, h2, h3, h4, h5, h6 {
+    color: $SlyMainColor;
+  }
+  div {
+    border: $borderWidth solid $SlySecondaryColor;
   }
 }
