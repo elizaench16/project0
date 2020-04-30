@@ -32,7 +32,7 @@ $SlySecondaryColor: #c7c7c7; /*steel grey*/
       height: 40%;
     }
     h1 {
-      font-size: 100px;
+      font-size: 130px;
       font-weight: bold;
       font-family: Luminari, fantasy;
     }
@@ -53,6 +53,26 @@ $SlySecondaryColor: #c7c7c7; /*steel grey*/
     .container {
         display: flex;
         flex-wrap: wrap;
+        div>table {
+          width: 900px;
+        }
+        div {
+          font-size: 20px;
+          margin: 20px;
+          padding: 20px;
+          width: 500px;
+        }
+
+        table {
+          th {
+            font-size: 28;
+            font-weight: bold;
+          }
+          td {
+            font-size: 24;
+            font-weight: normal;
+          }
+        }
     }
 }
 
@@ -67,10 +87,6 @@ $SlySecondaryColor: #c7c7c7; /*steel grey*/
       div {
         border: $borderWidth solid $GHSecondaryColor;
         background-color: $GHPrimaryColor;
-        font-size: 20px;
-        margin: 10px;
-        padding: 20px;
-        width: 400px;
       }
     }
 }
@@ -106,8 +122,14 @@ $SlySecondaryColor: #c7c7c7; /*steel grey*/
   h1, h2, h3, h4, h5, h6 {
     color: $RavenMainColor;
   }
-  div {
+  .container {
+    div, table {
     border: $borderWidth solid $RavenSecondaryColor;
+    }
+    th, td, tr {
+      border: 2px solid $RavenSecondaryColor;
+      color: $RavenMainColor;
+    }
   }
 }
 
@@ -118,7 +140,15 @@ $SlySecondaryColor: #c7c7c7; /*steel grey*/
   h1, h2, h3, h4, h5, h6 {
     color: $SlyMainColor;
   }
-  div {
+  div, table, th, td {
     border: $borderWidth solid $SlySecondaryColor;
   }
+}
+
+#aboutPage {
+   position: absolute;
+   right: 10px;
+   top: 400px;
+   width: 300;
+   font-size: 15px;
 }
