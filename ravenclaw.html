@@ -6,27 +6,71 @@
    <link rel="stylesheet" href="style.css">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravenclaw House</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <style>
+    /*if on a screen 992 or larger (eg. a laptop or desktop), doesn't show, only shows on smaller devices*/
+    @media screen and (min-width: 992px) {
+      .pageGuide {
+        display: none;
+      }
+    }
+    </style>
   </head>
 
+
   <body class="ravenclaw">
+
+    <nav class="navbar navbar-expand-sm">
+        <a class="navbar-brand" href="#">
+          <img src="https://wherethedogstarrages.files.wordpress.com/2015/01/hogwarts_crest_by_geijvontaen-d665icx.png" style="max-height:80px">
+        </a>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="thegreathall.html" style="color:#AA26DA;">Great Hall</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gryffindor.html" style="color:red;">Gryffindor</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="hufflepuff.html" style="color:yellow;">Hufflepuff</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ravenclaw.html" style="color:aqua;">Ravenclaw<span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="slytherin.html" style="color:green;">Slytherin</a>
+          </li>
+        </ul>
+    </nav>
+
     <h3>Welcome back to</h3>
     <h1>Ravenclaw House</h1>
-    <img src="https://static.tvtropes.org/pmwiki/pub/images/ravenclaw_transparent.png" height=20%>
+    <img src="https://static.tvtropes.org/pmwiki/pub/images/ravenclaw_transparent.png" max-height=20%>
     <h2>Wit Beyond Measure is Man's Greatest Treasure</h2>
 
     <div style="position:relative" class="container">
-      <div class="col-5">
-        <h3>Ravenclaw News and Updates</h3>
-        <p></p>
+      <div class="col-sm-12 pageGuide">
+        <a href="#weeklyWit"><h3>Wit of the Week</h3></a>
+        <a href="#weeklyRiddle"><h3>Riddle of the Week</h3></a>
+        <a href="#alumni"><h3>Notable Alumni</h3></a>
       </div>
 
-      <div class="col-5">
-        <h3>Riddles</h3>
+      <div class="col-lg-5 col-sm-12" id="weeklyWit">
+        <h3>Wit of the Week</h3>
+        <p>Knowledge is knowing that a pumpkin is a fruit. Knowledge is also knowing that a pumpkin can be a vegetable, as "vegetable vs. fruit" is a societal categorization, not a scientific one. Wisdom is shutting up and drinking your pumpkin juice instead of lecturing the table about it.</p>
+      </div>
+
+      <div class="col-lg-5 col-sm-12" id="weeklyRiddle">
+        <h3>Riddle of the Week</h3>
         <p>Give me food and I will grow, give me water and I will die. What am I?</p>
-        <input type="text" placeholder="Type your answer" name="answer">
+        <input type="text" placeholder="Type your answer" name="answer1">
+        <p>Those who build me, buy me, and see me can't use me. Only those who don't know they are using me can use me. What am I?</p>
+        <input type="text" placeholder="Type your answer" name="answer2">
       </div>
 
-    <div class="col-10">
+    <div class="col-12" id="alumni">
         <h3>Notable Alumni</h3>
         <table>
           <tr>
@@ -39,7 +83,7 @@
             <td>Chidi Anagonye</td>
             <td>Professor of Ethics</td>
             <td>Deceased (?)</td>
-            <td>Longest sorting in history. After 40 minutes with no sign of progress, it was decided to begin the feast and allow students to eat while the process continued. Anagonye was finally Sorted into Ravenclaw that night at midnight. Unsorted students (which was nearly all of them, as he was only the second called) were fed and housed with the Hufflepuffs until the next day, when the rest sorting continued.</td>
+            <td>Longest sorting in history. After 40 minutes with no sign of progress, it was decided to begin the feast and allow students to eat while the process continued. Anagonye was finally Sorted into Ravenclaw that night at midnight. Unsorted students (which was nearly all of them, as he was only the second called) were fed and housed with the Hufflepuffs until the next day, when the rest of the sorting continued.</td>
           </tr>
         </table>
       </div>
