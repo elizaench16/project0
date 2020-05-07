@@ -9,6 +9,14 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
    <title>Great Hall</title>
+   <style>
+   /*if on a screen 992 or larger (eg. a laptop or desktop), doesn't show, only shows on smaller devices*/
+   @media screen and (min-width: 992px) {
+     .pageGuide {
+       display: none;
+     }
+   }
+   </style>
   </head>
 
   <body class="greatHall">
@@ -19,19 +27,19 @@
       </a>
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="thegreathall.html" style="color:#AA26DA; font-family:Arial; font-weight: bold;">Great Hall<span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="thegreathall.html" style="color:#AA26DA;">Great Hall<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="gryffindor.html" style="color:red; font-family:Arial; font-weight:bold;">Gryffindor</a>
+          <a class="nav-link" href="gryffindor.html" style="color:red;">Gryffindor</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="hufflepuff.html" style="color:yellow; font-family:Arial; font-weight:bold;">Hufflepuff</a>
+          <a class="nav-link" href="hufflepuff.html" style="color:yellow;">Hufflepuff</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="ravenclaw.html" style="color:aqua; font-family:Arial; font-weight:bold;">Ravenclaw</a>
+          <a class="nav-link" href="ravenclaw.html" style="color:aqua;">Ravenclaw</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="slytherin.html" style="color:green; font-family:Arial; font-weight:bold;">Slytherin</a>
+          <a class="nav-link" href="slytherin.html" style="color:green;">Slytherin</a>
         </li>
       </ul>
   </nav>
@@ -40,16 +48,21 @@
     <h3>Welcome back to</h3>
     <h1>Hogwarts</h1>
     <h2>Premier School of Witchcraft and Wizardry</h2>
-    <img src="https://wherethedogstarrages.files.wordpress.com/2015/01/hogwarts_crest_by_geijvontaen-d665icx.png" max-height=30% max-width=30%>
+    <img src="https://wherethedogstarrages.files.wordpress.com/2015/01/hogwarts_crest_by_geijvontaen-d665icx.png" max-height=30%>
 
+    <div style="position:relative" class="container">
+      <div class="col-sm-12 pageGuide">
+        <a href="#aboutSite"><h3>About the Alumni Network</h3></a>
+        <a href="#News"><h3>News and Updates</h3></a>
+        <a href="#weeklySpell"><h3>Spell of the Week</h3></a>
+      </div>
 
-    <div class="container">
-      <div id="aboutPage">
+      <div class="col-12" id="aboutSite">
         <h3>About the Alumni Network</h3>
         <p>This network was established in 2010 by a pair of muggleborn sisters, Sally and Susie Hackmore. The Hackmore created the site to allow for an easier way to keep in touch with classmates, make connections, and get updates on Hogwarts. With the creation of the World Wide Wizarding Web in 2015, this site has become the primary source of information for Hogwarts Alums.</p>
       </div>
 
-      <div>
+      <div class="col-lg-5 mr-auto col-sm-12" id="News">
         <h3>News and Updates</h3>
         <p>We are pleased to report that Hogwarts currently has no cases of the recent outbreak pixie pox outbreak. Due to this, as well as concerns about increased student exposure should students return home, Hogwarts has made the decision to continue the term, with added safety measures below:</p>
         <ul>
@@ -59,12 +72,11 @@
         </ul>
       </div>
 
-      <div>
-        <h3>Current Faculty</h3>
-        <ul>
-          <li>Headmistress: Pomona Sprout</li>
-          <li>Deputy Headmaster: Neville Longbottom</li>
-        </ul>
+      <div class="col-lg-5 ml-auto col-sm-12" id="weeklySpell">
+        <h3>Spell of the Week</h3>
+        <h4>Sanitio</h4>
+        <p>Sanitio is a charm that is used to thoroughly sanitize hands and surfaces. Though often used in medicine and potions, it is not typically taught as part of the Charms curriculum as, due to the length of casting and the ready availability of soap and water, it is not as convenient as simply washing hands, though it is more effective at eradicating germs.</p>
+        <p>To cast, incant "Sanitio" and wave your wand over and around the intended surface for a period of no less than 30 seconds. As your casting hand is out of the range of the spell, this must be cast once per hand.</p>
     </div>
   </body>
 

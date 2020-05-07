@@ -6,14 +6,14 @@ $GHPrimaryColor: #E2B8FF; /*royal purple*/
 $GHSecondaryColor: #529027; /*chartreuse  */
 
 /*Gryffindor variables*/
-$GryffBackground: #F28F1C; /*ff6347; A04040; burgundy*/
-$GryffMainColor: #b31b1b; /*cherry*/
+$GryffBackground: #b31b1b; /* */
+$GryffMainColor: #F28F1C; /*cherry*/
 $GryffSecondaryColor: #FFD700;/*yellow gold*/
 
 /*Hufflepuff variables*/
 $HuffBackground: #000000; /*black*/
 $HuffMainColor: #FFFD01; /*bright yellow*/
-$HuffSecondaryColor: #FFC30B; /*honey yellow*/
+$HuffSecondaryColor: ##FFE5AD; /*honey yellow*/
 
 /*Ravenclaw variables*/
 $RavenBackground: #162252; /*navy*/
@@ -28,24 +28,18 @@ $SlySecondaryColor: #c7c7c7; /*steel grey*/
 .house {
     text-align: center;
     margin: 10px;
-    img {
-      height: 40%;
-    }
+    /*still need to make headers responsive*/
     h1 {
-      font-size: 130px;
-      font-weight: bold;
-      font-family: Luminari, fantasy;
+      font-size: 1vw; font-weight: bold;  font-family: Luminari, fantasy;
     }
-    h2, h3, h4, h5, h6 {
-      font-family: Apple Chancery, cursive;
-      font-weight: bold;
+    h2, h3, h4, h5, h6, a {
+      font-family: Apple Chancery, cursive; font-weight: bold;
     }
     p {
       font-size: 22;
     }
     ul {
-      text-align: left;
-      font-size: 26;
+      text-align: left;  font-size: 26;
       li{
         font-size: 20;
       }
@@ -53,34 +47,36 @@ $SlySecondaryColor: #c7c7c7; /*steel grey*/
     .container {
         display: flex;
         flex-wrap: wrap;
-        div>table {
-          width: 900px;
-        }
         div {
-          font-size: 20px;
-          margin: 20px;
-          padding: 20px;
-          width: 500px;
+          font-size: 20px;  margin: 20px; padding: 20px;
         }
-
+        /*table font size still not applied*/
         table {
           th {
-            font-size: 28;
-            font-weight: bold;
+            font-size: 40; font-weight: bold;
           }
           td {
-            font-size: 24;
-            font-weight: normal;
+            font-size: 24;  font-weight: normal;
           }
         }
     }
 }
 
+nav-link {
+  font-family: Arial, bold;
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.pageGuide {
+  font-style: bold;
+}
+
 .greatHall {
   @extend .house;
-  background-color: $GHBackColor; /*midnight blue*/
+  background-color: $GHBackColor;
   color: $GHSecondaryColor;
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, a {
     color: $GHSecondaryColor;
   }
   .container {
@@ -110,8 +106,14 @@ $SlySecondaryColor: #c7c7c7; /*steel grey*/
   h1, h2, h3, h4, h5, h6 {
     color: $HuffMainColor;
   }
-  div {
+  .container {
+    div, table {
     border: $borderWidth solid $HuffSecondaryColor;
+    }
+    th, td, tr {
+      border: 2px solid $HuffSecondaryColor;
+      color: $HuffSecondaryColor;
+    }
   }
 }
 
@@ -140,15 +142,9 @@ $SlySecondaryColor: #c7c7c7; /*steel grey*/
   h1, h2, h3, h4, h5, h6 {
     color: $SlyMainColor;
   }
-  div, table, th, td {
-    border: $borderWidth solid $SlySecondaryColor;
+  .container {
+    div, table, th, td {
+      border: $borderWidth solid $SlySecondaryColor;
+    }
   }
-}
-
-#aboutPage {
-   position: absolute;
-   right: 10px;
-   top: 400px;
-   width: 300;
-   font-size: 15px;
 }
